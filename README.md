@@ -2,7 +2,7 @@
 
 This project library demo for 4 components: Header, Slidebar, Bottom, Login
 
-Demo page: [https://talentvn.github.io/NTDemo-Lib/](https://talentvn.github.io/NTDemo-Lib/)
+Demo page: [https://nhattranorient.github.io/NTDemo-Lib/](https://nhattranorient.github.io/NTDemo-Lib/)
 
 
 ### Infrastructure:
