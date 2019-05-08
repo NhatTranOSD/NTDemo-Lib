@@ -1,0 +1,17 @@
+<div class="container">
+    <NTHeader title="{{title}}" [headerSettings]="headerSettings"></NTHeader>
+    <div class="row">
+        <div class="col-md-3">
+            <NTSlide-Bar title="{{title}}" [menuSettings]="menuSettings"></NTSlide-Bar>
+        </div>
+        <div class="col-md-9">
+            <!--The content below is only a placeholder and can be replaced.-->
+            <NTLogin (userName)='getUserName($event)' (passWord)='getPassWord($event)' (rememberMe)='getRememberMe($event)'></NTLogin>
+        </div>
+    </div>
+
+    <NTFooter title="{{bottomTitle}}"></NTFooter>
+
+    <!-- Content -->
+    <router-outlet></router-outlet>
+</div>

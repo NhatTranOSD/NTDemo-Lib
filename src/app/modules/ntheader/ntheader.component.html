@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <!-- Org Name -->
+    <a class="navbar-brand" href="#">
+        <img src="{{headerSettings.logoUrl}}" height="50" width="50" alt="..." class="rounded"> {{headerSettings.orgName}}
+    </a>
+
+    <!-- button toggle -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menuitems -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li *ngFor="let menu of headerSettings.menus" class="nav-item active">
+                <label ngbButtonLabel><a class="nav-link" href="{{menu.link}}">{{menu.title}} <span
+                            class="sr-only">(current)</span></a></label>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+
+    <!-- Dropdown Profile -->
+    <div ngbDropdown class="d-inline-block" autoClose="outside">
+        <img [src]="headerSettings.user.profileImage" height="50" width="50" alt="My Profile" id="dropdownForm1" class="rounded-circle" ngbDropdownToggle>
+
+        <div ngbDropdownMenu aria-labelledby="dropdownForm1">
+            <form class="px-4">
+                <div class="form-group">
+                    <label for="exampleDropdownFormEmail1">
+                        Signed in as <b>{{headerSettings.user.userName}}</b>
+                    </label>
+                </div>
+            </form>
+            <div class="dropdown-divider"></div>
+            <label *ngFor="let tag of headerSettings.user.tags" ngbButtonLabel ngbDropdownItem><a
+                    href="{{tag.link}}">{{tag.detail}}</a>
+            </label>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,18 @@
+.NTslidebar {
+    height: 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#sidebar {
+    height: 82vh;
+    background-color: #ccc;
+}
+
+#sidebar .list-group-item {
+    border-radius: 0;
+    background-color: #ccc;
+    color: #ccc;
+    border-color: #ccc;
+    text-decoration: none;
+}
