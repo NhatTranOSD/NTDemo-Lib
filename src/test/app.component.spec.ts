@@ -1,12 +1,22 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { NTheaderModule } from '../app/modules/ntheader/ntheader.module';
+import { NTSlideBarModule } from '../app/modules/ntslide-bar/ntslide-bar.module';
+import { NTFooterModule } from '../app/modules/ntfooter/ntfooter.module';
+import { NTLoginModule } from '../app/modules/ntlogin/ntlogin.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        FormsModule,
+        NTheaderModule,
+        NTSlideBarModule,
+        NTFooterModule,
+        NTLoginModule
       ],
       declarations: [
         AppComponent
@@ -26,10 +36,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('NT-Demo-lib');
   });
 
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to NT-Demo-lib!');
-  });
 });

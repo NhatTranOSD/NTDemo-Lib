@@ -5,6 +5,7 @@
  */
 
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NTHeaderComponent } from '../ntheader/ntheader.component';
@@ -13,7 +14,8 @@ import { NTHeaderComponent } from '../ntheader/ntheader.component';
   declarations: [NTHeaderComponent],
   imports: [
     CommonModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   exports: [
     NTHeaderComponent

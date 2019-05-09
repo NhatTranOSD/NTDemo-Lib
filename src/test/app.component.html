@@ -1,16 +1,26 @@
-<div class="container">
-    <NTHeader title="{{title}}" [headerSettings]="headerSettings"></NTHeader>
+<title>
+    <h1>NT-Demo-lib</h1>
+</title>
+<div class="">
+    <NTHeader title="{{title}}" (onSubmit)="searchSubmit($event)" [headerSettings]="headerSettings"></NTHeader>
     <div class="row">
-        <div class="col-md-3">
-            <NTSlide-Bar title="{{title}}" [menuSettings]="menuSettings"></NTSlide-Bar>
-        </div>
-        <div class="col-md-9">
+
+        <NTSlide-Bar [isOpen]="isOpen" title="{{title}}" [menuSettings]="menuSettings"></NTSlide-Bar>
+
+        <div [ngClass]="{'col-md-9': isOpen, 'col-md-12': !isOpen}">
+
+            <!-- Rounded switch -->
+            <label class="switch">
+                <input (click)="toggle()" type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+
             <!--The content below is only a placeholder and can be replaced.-->
-            <NTLogin (userName)='getUserName($event)' (passWord)='getPassWord($event)' (rememberMe)='getRememberMe($event)'></NTLogin>
+            <NTLogin (userName)='getUserName($event)' (passWord)='getPassWord($event)' (rememberMe)='getRememberMe($event)' (submited)='getSubmited($event)'></NTLogin>
         </div>
     </div>
 
-    <NTFooter title="{{bottomTitle}}"></NTFooter>
+    <NTFooter [title]="bottomTitle"></NTFooter>
 
     <!-- Content -->
     <router-outlet></router-outlet>

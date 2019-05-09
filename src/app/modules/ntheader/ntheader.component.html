@@ -1,9 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
 
     <!-- Org Name -->
-    <a class="navbar-brand" href="#">
-        <img src="{{headerSettings.logoUrl}}" height="50" width="50" alt="..." class="rounded"> {{headerSettings.orgName}}
-    </a>
+    <b class="navbar-brand" href="#">
+        <img src="{{headerSettings.logoUrl}}" height="50" width="50" alt="..." class="rounded">
+        {{headerSettings.orgName}}
+    </b>
 
     <!-- button toggle -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,15 +13,15 @@
 
     <!-- Menuitems -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul *ngIf="headerSettings.menus != null" class="navbar-nav mr-auto">
             <li *ngFor="let menu of headerSettings.menus" class="nav-item active">
-                <label ngbButtonLabel><a class="nav-link" href="{{menu.link}}">{{menu.title}} <span
+                <label ngbButtonLabel><a class="nav-link text-dark" href="{{menu.link}}">{{menu.title}} <span
                             class="sr-only">(current)</span></a></label>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input name="searchString" class="form-control mr-sm-2" [(ngModel)]="searchString" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" (click)="submitSearch()" type="submit">Search</button>
         </form>
     </div>
 

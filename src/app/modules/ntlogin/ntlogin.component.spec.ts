@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
 import { NTLoginComponent } from './ntlogin.component';
 
 describe('NTLoginComponent', () => {
@@ -8,9 +8,12 @@ describe('NTLoginComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NTLoginComponent ]
+      declarations: [NTLoginComponent],
+      imports: [
+        FormsModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

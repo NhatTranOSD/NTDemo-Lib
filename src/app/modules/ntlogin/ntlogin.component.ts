@@ -51,6 +51,14 @@ export class NTLoginComponent {
    */
   @Output() rememberMe = new EventEmitter<boolean>();
 
+  /**
+ * submited output
+ * 
+ * @returns {boolean}
+ */
+  @Output() submited = new EventEmitter<boolean>();
+
+
   // Init model
   userLogin: UserLogin = {
     UserName: '',
@@ -77,6 +85,7 @@ export class NTLoginComponent {
     this.userName.emit(this.userLogin.UserName);
     this.passWord.emit(this.userLogin.Password);
     this.rememberMe.emit(this.userLogin.RememberMe);
+    this.submited.emit(true);
   }
 
 }

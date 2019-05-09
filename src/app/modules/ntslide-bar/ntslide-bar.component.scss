@@ -1,4 +1,4 @@
-.NTslidebar {
+.ntslidebar {
     height: 80%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -15,4 +15,8 @@
     color: #ccc;
     border-color: #ccc;
     text-decoration: none;
+}
+
+.slideclose {
+    width: 0;
 }

@@ -4,7 +4,7 @@
  * Licensed under the MIT License.
  */
 
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { HeaderSettings } from '../../interfaces/interfaces';
 
 /**
@@ -17,8 +17,26 @@ import { HeaderSettings } from '../../interfaces/interfaces';
 
 export class NTHeaderComponent {
 
+  /**
+   * headerSettings input as HeaderSettings interface
+   * 
+   * @type {HeaderSettings}
+   */
   @Input() headerSettings: HeaderSettings;
 
+  /**
+   * searchString output
+   * 
+   * @returns {string}
+   */
+  @Output() onSubmit = new EventEmitter<string>();
+
+  searchString = '';
+
   constructor() { }
+
+  submitSearch(): void {
+    this.onSubmit.emit(this.searchString);
+  }
 
 }

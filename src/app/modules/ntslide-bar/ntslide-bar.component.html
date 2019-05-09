@@ -1,18 +1,15 @@
-<div id="sidebar" class="NTslidebar">
-    <a *ngIf="title != null" class="nav-link" href="#">{{title}}</a>
-
-    <div *ngIf="menuSettings != null" class="list-group">
-        <div *ngFor="let menu of menuSettings.menuItems">
-            <div class="row container-fluid">
-                <a href="{{menu.link}}" class="list-group-item">
-                    <button type="button" class="btn btn-primary btn-sm btn-block">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <i *ngIf="menu.icon != ''" class="{{menu.icon}}"></i>
-                            </div>
-                            <div class="col-lg-9">{{menu.title}}</div>
+<div [ngClass]="{'slideclose': !navStatus}">
+    <div class="col">
+        <div id="sidebar" class="ntslidebar bg-light shadow-sm">
+            <a *ngIf="title != null" class="nav-link" href="#">{{title}}</a>
+            <div *ngIf="menuSettings != null" class="list-group list-group-flush">
+                <a *ngFor="let menu of menuSettings.menuItems" [href]="menu.link" class="list-group-item list-group-item-action active bg-light">
+                    <div class="row text-dark">
+                        <div class="col-lg-3">
+                            <i *ngIf="menu.icon != ''" class="{{menu.icon}}"></i>
                         </div>
-                    </button>
+                        <div class="col-lg-9">{{menu.title}}</div>
+                    </div>
                 </a>
             </div>
         </div>

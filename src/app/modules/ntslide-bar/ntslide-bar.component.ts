@@ -35,10 +35,22 @@ export class NTSlideBarComponent {
   @Input() title: string;
 
   /**
+   * Input slide bar status open or close
+   * 
+   * @type {boolean}
+   */
+  @Input()
+  set isOpen(isOpen: boolean) {
+    this.navStatus = isOpen;
+  };
+
+  /**
    * Input Menu setting params
    * @type {Menu}
    */
   @Input() menuSettings: Menu;
+
+  navStatus: boolean = true;
 
   constructor() {
   }

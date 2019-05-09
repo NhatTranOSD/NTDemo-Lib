@@ -7,6 +7,8 @@ import { NTSlideBarModule } from '../app/modules/ntslide-bar/ntslide-bar.module'
 import { NTFooterModule } from '../app/modules/ntfooter/ntfooter.module';
 import { NTLoginModule } from '../app/modules/ntlogin/ntlogin.module';
 
+import { FormsModule } from '@angular/forms';
+
 import { NgbButtonsModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -25,7 +27,8 @@ import { AppComponent } from './app.component';
     NTSlideBarModule,
     NTFooterModule,
     NgbModule,
-    NgbButtonsModule
+    NgbButtonsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
