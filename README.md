@@ -29,6 +29,7 @@ Demo page: [https://nhattranosd.github.io/NTDemo-Lib//](https://nhattranosd.gith
 ------------ ntlogin.component.ts
 ------------ ntlogin.module.ts
 ------ ntslide-bar
+------------ menu-item.component.ts
 ------------ ntslide-bar.component.html
 ------------ ntslide-bar.component.scss
 ------------ ntslide-bar.component.ts

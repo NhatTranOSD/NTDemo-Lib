@@ -2,15 +2,10 @@
     <div class="col">
         <div id="sidebar" class="ntslidebar bg-light shadow-sm">
             <a *ngIf="title != null" class="nav-link" href="#">{{title}}</a>
-            <div *ngIf="menuSettings != null" class="list-group list-group-flush">
-                <a *ngFor="let menu of menuSettings.menuItems" [href]="menu.link" class="list-group-item list-group-item-action active bg-light">
-                    <div class="row text-dark">
-                        <div class="col-lg-3">
-                            <i *ngIf="menu.icon != ''" class="{{menu.icon}}"></i>
-                        </div>
-                        <div class="col-lg-9">{{menu.title}}</div>
-                    </div>
-                </a>
+            <div *ngIf="menuSettings != null" class="list-group list-group-flush bg-danger">
+                <div *ngFor="let menu of menuSettings.menuItems" class="">
+                    <NTMenuItem [link]='menu.link' [title]='menu.title' [icon]='menu.icon'></NTMenuItem>
+                </div>
             </div>
         </div>
     </div>

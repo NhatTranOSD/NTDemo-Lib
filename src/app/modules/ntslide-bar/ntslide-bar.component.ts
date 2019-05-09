@@ -4,7 +4,7 @@
  * Licensed under the MIT License.
  */
 
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Menu } from '../../interfaces/interfaces';
 
 /**
