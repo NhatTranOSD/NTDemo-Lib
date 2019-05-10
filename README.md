@@ -126,8 +126,17 @@ imports: [
 ```
   Template
 ```html
-<NTHeader title="{{title}}" (onSubmit)="searchSubmit($event)" [headerSettings]="headerSettings"></NTHeader>
+<NTHeader (onSubmit)="searchSubmit($event)" [headerSettings]="headerSettings"></NTHeader>
 ```
+Inputs
+| Name           | Type                     | Description              |
+|----------------|--------------------------|--------------------------|
+| headerSettings | HeaderSettings Interface | Setting header component |
+Outputs
+| Name     | Type   | Description                            |
+|----------|--------|----------------------------------------|
+| onSubmit | string | Search string output with submit event |
+
  Setting header on component file such as app.component.ts
 ```ts
   // Init title
@@ -171,6 +180,11 @@ imports: [
 ```html
 <NTFooter [title]="bottomTitle"></NTFooter>
 ```
+Inputs
+| Name  | Type   | Description        |
+|-------|--------|--------------------|
+| title | string | Bottom title input |
+
  Setting footer on component file such as app.component.ts
 ```ts
 // Init bottom title
@@ -188,9 +202,10 @@ imports: [
     NTSlideBarModule,
   ],
 ```
+
   Template
 ```html
-<NTSlide-Bar [isOpen]="isOpen" title="{{title}}" [menuSettings]="menuSettings"></NTSlide-Bar>
+<NTSlide-Bar [isOpen]="isOpen" [title]="title" [menuSettings]="menuSettings"></NTSlide-Bar>
 
 <!-- Rounded switch -->
 <label class="switch">
@@ -198,7 +213,15 @@ imports: [
     <span class="slider round"></span>
 </label>
 ```
- Setting header on component file such as app.component.ts
+Inputs
+| Name         | Type                   | Description                   |
+|--------------|------------------------|-------------------------------|
+| title        | string                 | Header title                  |
+| isOpen       | boolean                | slide open/close input toggle |
+| menuSettings | MenuSettings Interface | Setting slide bar menu input  |
+
+
+ Setting slidebar component file such as app.component.ts
 ```ts
 // Init toggle
 isOpen: boolean = true;
@@ -229,8 +252,15 @@ imports: [
   Template
 ```html
 <NTLogin (userName)='getUserName($event)' (passWord)='getPassWord($event)'
-                (rememberMe)='getRememberMe($event)'></NTLogin>
+                (rememberMe)='getRememberMe($event)' (submited)='getSubmited($event)'></NTLogin>
 ```
+Outputs
+| Name       | Type    | Description         |
+|------------|---------|---------------------|
+| userName   | string  | UserName value      |
+| passWord   | string  | passWord value      |
+| rememberMe | boolean | rememberMe value    |
+| submited   | boolean | search submit event |
 
  Setting Login on component file such as app.component.ts
 ```ts

@@ -1,11 +1,11 @@
 <title>
-    <h1>NT-Demo-lib</h1>
+    <h1>{{title}}</h1>
 </title>
 <div class="">
-    <NTHeader title="{{title}}" (onSubmit)="searchSubmit($event)" [headerSettings]="headerSettings"></NTHeader>
+    <NTHeader (onSubmit)="searchSubmit($event)" [headerSettings]="headerSettings"></NTHeader>
     <div class="row">
 
-        <NTSlide-Bar [isOpen]="isOpen" title="{{title}}" [menuSettings]="menuSettings"></NTSlide-Bar>
+        <NTSlide-Bar [isOpen]="isOpen" [title]="title" [menuSettings]="menuSettings"></NTSlide-Bar>
 
         <div [ngClass]="{'col-md-9': isOpen, 'col-md-12': !isOpen}">
 
