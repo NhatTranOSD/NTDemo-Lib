@@ -2,6 +2,9 @@
  * Header Interface Model
  */
 export interface HeaderSettings {
+    isLogin: boolean;
+    searchEnabled: boolean;
+    menuEnabled: boolean;
     logoUrl: string;
     orgName: string;
     menus?: MenuData[];

@@ -150,6 +150,9 @@ Outputs
   headerSettings: HeaderSettings = {
     logoUrl: 'https://cdn.worldvectorlogo.com/logos/react.svg',
     orgName: 'OSD',
+    searchEnabled: true,
+    menuEnabled: true,
+    isLogin: true,
     menus: [{ title: 'Menu 1', link: '#1' },
     { title: 'Menu 2', link: '#2' },
     { title: 'Menu 2', link: '#3' }],

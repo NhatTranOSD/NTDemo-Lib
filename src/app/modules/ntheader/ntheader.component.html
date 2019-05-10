@@ -13,20 +13,20 @@
 
     <!-- Menuitems -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul *ngIf="headerSettings.menus != null" class="navbar-nav mr-auto">
+        <ul *ngIf="headerSettings.menus != null && headerSettings.menuEnabled" class="navbar-nav mr-auto">
             <li *ngFor="let menu of headerSettings.menus" class="nav-item active">
                 <label ngbButtonLabel><a class="nav-link text-dark" href="{{menu.link}}">{{menu.title}} <span
                             class="sr-only">(current)</span></a></label>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <form *ngIf='headerSettings.searchEnabled' class="form-inline my-2 my-lg-0">
             <input name="searchString" class="form-control mr-sm-2" [(ngModel)]="searchString" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" (click)="submitSearch()" type="submit">Search</button>
         </form>
     </div>
 
     <!-- Dropdown Profile -->
-    <div ngbDropdown class="d-inline-block" autoClose="outside">
+    <div *ngIf='headerSettings.isLogin' ngbDropdown class="d-inline-block" autoClose="outside">
         <img [src]="headerSettings.user.profileImage" height="50" width="50" alt="My Profile" id="dropdownForm1" class="rounded-circle" ngbDropdownToggle>
 
         <div ngbDropdownMenu aria-labelledby="dropdownForm1">

@@ -28,6 +28,9 @@ export class AppComponent implements OnInit {
 
     this.headerSettings = {
       logoUrl: 'https://cdn.worldvectorlogo.com/logos/react.svg',
+      searchEnabled: true,
+      menuEnabled: true,
+      isLogin: true,
       orgName: 'OSD',
       menus: [{ title: 'Menu 1', link: '#1' },
       { title: 'Menu 2', link: '#2' },
