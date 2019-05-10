@@ -142,10 +142,12 @@ Outputs
 
  Setting header on component file such as app.component.ts
 ```ts
+  import { HeaderSettings } from 'nt-demo-library';
+  ...
   // Init title
   title = 'NT-Demo-lib';
   // Setting header to render
-  this.headerSettings = {
+  headerSettings: HeaderSettings = {
     logoUrl: 'https://cdn.worldvectorlogo.com/logos/react.svg',
     orgName: 'OSD',
     menus: [{ title: 'Menu 1', link: '#1' },
@@ -227,10 +229,12 @@ Inputs
 
  Setting slidebar component file such as app.component.ts
 ```ts
+import { Menu } from 'nt-demo-library';
+...
 // Init toggle
 isOpen: boolean = true;
 // Init slidebar settings to render
-this.menuSettings = {
+menuSettings: Menu = {
       menuItems: [{ title: 'Menu Menu 1', link: 'facebool', icon: 'far fa-address-book fa-2x' },
       { title: 'Menu Menu Menu 2', link: '#', icon: 'fab fa-adn fa-2x' },
       { title: 'Menu Menu Menu 2', link: '#', icon: 'fas fa-ambulance fa-2x' },
