@@ -40,9 +40,9 @@ Demo page: [https://nhattranosd.github.io/NTDemo-Lib//](https://nhattranosd.gith
 
 
 ## Dependencies
-| ng-bootstrap | Angular | Bootstrap CSS | fortawesome |
-| ------------ | ------- | ------------- | ------------|
-| 4.x.x        | 7.x.x   | 4.x.x         | 5.x.x
+| ng-bootstrap | Angular | fortawesome |
+| ------------ | ------- | ------------|
+| 4.x.x        | 7.x.x   | 5.x.x       |
 
 ## Intall npm
 
@@ -130,50 +130,23 @@ imports: [
 ```
  Setting header on component file such as app.component.ts
 ```ts
-// Init title
+  // Init title
   title = 'NT-Demo-lib';
   // Setting header to render
-  headerSettings = {
+  this.headerSettings = {
     logoUrl: 'https://cdn.worldvectorlogo.com/logos/react.svg',
     orgName: 'OSD',
-    menus: [{
-      title: 'Menu 1',
-      link: '#1'
-    },
-    {
-      title: 'Menu 2',
-      link: '#2'
-    },
-    {
-      title: 'Menu 2',
-      link: '#3'
-    }
-    ],
+    menus: [{ title: 'Menu 1', link: '#1' },
+    { title: 'Menu 2', link: '#2' },
+    { title: 'Menu 2', link: '#3' }],
     user: {
       userName: 'Nhat Tran',
       profileImage: 'https://img.icons8.com/color/1600/circled-user-male-skin-type-1-2.png',
-      tags: [
-        {
-          detail: 'Your Profile',
-          link: '#'
-        },
-        {
-          detail: 'Your Projects',
-          link: '#'
-        },
-        {
-          detail: 'Settings',
-          link: '#'
-        },
-        {
-          detail: 'Help',
-          link: '#'
-        },
-        {
-          detail: 'Sign Out',
-          link: '#'
-        }
-      ]
+      tags: [{ detail: 'Your Profile', link: '#' },
+      { detail: 'Your Projects', link: '#' },
+      { detail: 'Settings', link: '#' },
+      { detail: 'Help', link: '#' },
+      { detail: 'Sign Out', link: '#' }]
     }
   };
 
@@ -230,38 +203,11 @@ imports: [
 // Init toggle
 isOpen: boolean = true;
 // Init slidebar settings to render
-menuSettings = {
-      menuItems: [{
-        title: 'Menu Menu 1',
-        link: '#',
-        icon: 'far fa-address-book fa-2x'
-      },
-      {
-        title: 'Menu Menu Menu 2',
-        link: '#',
-        icon: 'fab fa-adn fa-2x'
-      },
-      {
-        title: 'Menu Menu Menu 2',
-        link: '#',
-        icon: 'fas fa-ambulance fa-2x'
-      },
-      {
-        title: 'Menu Menu Menu 2',
-        link: '#',
-        icon: 'far fa-address-book fa-2x'
-      },
-      {
-        title: 'Menu Menu Menu 2',
-        link: '#',
-        icon: 'fab fa-adn fa-2x'
-      },
-      {
-        title: 'Menu Menu Menu 2',
-        link: '#',
-        icon: ''
-      },
-      ]
+this.menuSettings = {
+      menuItems: [{ title: 'Menu Menu 1', link: 'facebool', icon: 'far fa-address-book fa-2x' },
+      { title: 'Menu Menu Menu 2', link: '#', icon: 'fab fa-adn fa-2x' },
+      { title: 'Menu Menu Menu 2', link: '#', icon: 'fas fa-ambulance fa-2x' },
+      { title: 'Menu Menu Menu 2', link: '#', icon: '' }]
     };
 
 toggle(): void {
@@ -371,44 +317,17 @@ export class AppComponent implements OnInit {
     this.headerSettings = {
       logoUrl: 'https://cdn.worldvectorlogo.com/logos/react.svg',
       orgName: 'OSD',
-      menus: [{
-        title: 'Menu 1',
-        link: '#1'
-      },
-      {
-        title: 'Menu 2',
-        link: '#2'
-      },
-      {
-        title: 'Menu 2',
-        link: '#3'
-      }
-      ],
+      menus: [{ title: 'Menu 1', link: '#1' },
+      { title: 'Menu 2', link: '#2' },
+      { title: 'Menu 2', link: '#3' }],
       user: {
         userName: 'Nhat Tran',
         profileImage: 'https://img.icons8.com/color/1600/circled-user-male-skin-type-1-2.png',
-        tags: [
-          {
-            detail: 'Your Profile',
-            link: '#'
-          },
-          {
-            detail: 'Your Projects',
-            link: '#'
-          },
-          {
-            detail: 'Settings',
-            link: '#'
-          },
-          {
-            detail: 'Help',
-            link: '#'
-          },
-          {
-            detail: 'Sign Out',
-            link: '#'
-          }
-        ]
+        tags: [{ detail: 'Your Profile', link: '#' },
+        { detail: 'Your Projects', link: '#' },
+        { detail: 'Settings', link: '#' },
+        { detail: 'Help', link: '#' },
+        { detail: 'Sign Out', link: '#' }]
       }
     };
   }
@@ -416,37 +335,10 @@ export class AppComponent implements OnInit {
   // Fake datas menuSettings
   private buildMenuSetting(): void {
     this.menuSettings = {
-      menuItems: [{
-        title: 'Menu Menu 1',
-        link: '#',
-        icon: 'far fa-address-book fa-2x'
-      },
-      {
-        title: 'Menu Menu Menu 2',
-        link: '#',
-        icon: 'fab fa-adn fa-2x'
-      },
-      {
-        title: 'Menu Menu Menu 2',
-        link: '#',
-        icon: 'fas fa-ambulance fa-2x'
-      },
-      {
-        title: 'Menu Menu Menu 2',
-        link: '#',
-        icon: 'far fa-address-book fa-2x'
-      },
-      {
-        title: 'Menu Menu Menu 2',
-        link: '#',
-        icon: 'fab fa-adn fa-2x'
-      },
-      {
-        title: 'Menu Menu Menu 2',
-        link: '#',
-        icon: ''
-      },
-      ]
+      menuItems: [{ title: 'Menu Menu 1', link: 'facebool', icon: 'far fa-address-book fa-2x' },
+      { title: 'Menu Menu Menu 2', link: '#', icon: 'fab fa-adn fa-2x' },
+      { title: 'Menu Menu Menu 2', link: '#', icon: 'fas fa-ambulance fa-2x' },
+      { title: 'Menu Menu Menu 2', link: '#', icon: '' }]
     };
   }
 
@@ -479,5 +371,6 @@ export class AppComponent implements OnInit {
     console.log(event);
   }
 }
+
 
 ```
