@@ -223,7 +223,7 @@ Inputs
 |--------------|------------------------|-------------------------------|
 | title        | string                 | Header title                  |
 | isOpen       | boolean                | slide open/close input toggle |
-| menuSettings | MenuSettings Interface | Setting slide bar menu input  |
+| menuSettings | Menu Interface         | Setting slide bar menu input  |
 
  Setting slidebar component file such as app.component.ts
 ```ts
