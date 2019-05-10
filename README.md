@@ -129,10 +129,13 @@ imports: [
 <NTHeader (onSubmit)="searchSubmit($event)" [headerSettings]="headerSettings"></NTHeader>
 ```
 Inputs
+
 | Name           | Type                     | Description              |
 |----------------|--------------------------|--------------------------|
 | headerSettings | HeaderSettings Interface | Setting header component |
+
 Outputs
+
 | Name     | Type   | Description                            |
 |----------|--------|----------------------------------------|
 | onSubmit | string | Search string output with submit event |
@@ -181,6 +184,7 @@ imports: [
 <NTFooter [title]="bottomTitle"></NTFooter>
 ```
 Inputs
+
 | Name  | Type   | Description        |
 |-------|--------|--------------------|
 | title | string | Bottom title input |
@@ -214,12 +218,12 @@ imports: [
 </label>
 ```
 Inputs
+
 | Name         | Type                   | Description                   |
 |--------------|------------------------|-------------------------------|
 | title        | string                 | Header title                  |
 | isOpen       | boolean                | slide open/close input toggle |
 | menuSettings | MenuSettings Interface | Setting slide bar menu input  |
-
 
  Setting slidebar component file such as app.component.ts
 ```ts
@@ -255,6 +259,7 @@ imports: [
                 (rememberMe)='getRememberMe($event)' (submited)='getSubmited($event)'></NTLogin>
 ```
 Outputs
+
 | Name       | Type    | Description         |
 |------------|---------|---------------------|
 | userName   | string  | UserName value      |
