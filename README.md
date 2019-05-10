@@ -2,7 +2,7 @@
 
 This project library demo for 4 components: Header, Slidebar, Bottom, Login
 
-Demo page: [https://nhattranosd.github.io/NTDemo-Lib//](https://nhattranosd.github.io/NTDemo-Lib/)
+Demo page: [https://nhattranosd.github.io/NTDemo-Lib/](https://nhattranosd.github.io/NTDemo-Lib/)
 
 
 ### Infrastructure:
