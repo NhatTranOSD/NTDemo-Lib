@@ -1,6 +1,6 @@
 {
     "name": "nt-demo-library",
-    "version": "0.0.5",
+    "version": "0.1.0",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
@@ -59,12 +59,12 @@
     "dependencies": {},
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/TalentVN/NTDemo-Lib.git"
+        "url": "git+https://github.com/NhatTranOSD/NTDemo-Lib.git"
     },
     "author": "Nhat Tran",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/TalentVN/NTDemo-Lib/issues"
+        "url": "https://github.com/NhatTranOSD/NTDemo-Lib/issues"
     },
-    "homepage": "https://github.com/TalentVN/NTDemo-Lib#readme"
+    "homepage": "https://github.com/NhatTranOSD/NTDemo-Lib#readme"
 }
